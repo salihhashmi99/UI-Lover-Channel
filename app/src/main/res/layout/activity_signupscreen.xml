@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg01"
+    tools:context=".signupscreen">
+
+    <ImageView
+        android:id="@+id/imgplaybtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:src="@drawable/playbutton"
+        app:layout_constraintBottom_toTopOf="@id/plagimgbottomguide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/plagimgbottomguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25">
+    </androidx.constraintlayout.widget.Guideline>
+
+    <TextView
+        android:id="@+id/txtsignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Sign Up"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/plagimgbottomguide"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/edtemailftguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06">
+    </androidx.constraintlayout.widget.Guideline>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/edtemailrightguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93">
+    </androidx.constraintlayout.widget.Guideline>
+
+    <EditText
+        android:id="@+id/edtname"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:hint="Name"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_btn"
+        android:backgroundTint="@color/white"
+        android:textColorHint="@color/blue"
+        app:layout_constraintEnd_toEndOf="@id/edtemailrightguide"
+        app:layout_constraintStart_toStartOf="@id/edtemailftguide"
+        app:layout_constraintTop_toBottomOf="@id/txtsignUp" />
+
+    <EditText
+        android:id="@+id/edtemail"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:hint="Email Address"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_btn"
+        android:backgroundTint="@color/white"
+        android:textColorHint="@color/blue"
+        app:layout_constraintEnd_toEndOf="@id/edtemailrightguide"
+        app:layout_constraintStart_toStartOf="@id/edtemailftguide"
+        app:layout_constraintTop_toBottomOf="@id/edtname" />
+
+    <EditText
+        android:id="@+id/edtpassword"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:gravity="center"
+        android:layout_alignBottom="@id/edtemail"
+        android:hint="Password"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_btn"
+        android:textColorHint="@color/blue"
+        app:layout_constraintTop_toBottomOf="@id/edtemail"
+        app:layout_constraintEnd_toEndOf="@id/edtemailrightguide"
+        app:layout_constraintStart_toStartOf="@id/edtemailftguide"/>
+
+    <EditText
+        android:id="@+id/edtconfirm"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_btn"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:hint="Confirm Password"
+        android:textColorHint="@color/blue"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignup"
+        app:layout_constraintEnd_toEndOf="@id/edtemailrightguide"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@id/edtemailftguide"
+        app:layout_constraintTop_toBottomOf="@id/edtpassword"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="@color/pink"
+        android:text="Sign Up"
+        app:layout_constraintBottom_toTopOf="@+id/loginsection"
+        app:layout_constraintEnd_toEndOf="@id/edtemailrightguide"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@id/edtemailftguide" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/loginbtnbottomguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/forgetpasswordbottomguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.93"/>
+
+    <LinearLayout
+        android:id="@+id/loginsection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/forgetpasswordbottomguide">
+
+        <TextView
+            android:id="@+id/txtmsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account ?"
+            android:textSize="18dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/white"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/txtLogIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log Up"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

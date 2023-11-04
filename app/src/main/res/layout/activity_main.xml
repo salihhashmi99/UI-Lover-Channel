@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/circleleftguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.27"/>
+
+    <ImageView
+        android:id="@+id/toprounded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/circle"
+        app:layout_constraintBottom_toTopOf="@+id/circlebottomguide"
+        app:layout_constraintEnd_toStartOf="@+id/circleleftguide"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/circlebottomguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18">
+
+    </androidx.constraintlayout.widget.Guideline>
+
+    <ImageView
+        android:id="@+id/topimage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/communication"
+        app:layout_constraintBottom_toTopOf="@+id/txttitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/circlebottomguide"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txttitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Welcome to UI Lover Channal"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtdesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtdesc"
+        android:layout_width="266dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="16dp"
+        android:text="Download all designs available on the Ui Lover Channal for free"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/btmdesign"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/playbutton"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:src="@drawable/playbutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btmdesign"
+        app:layout_constraintVertical_bias="0.094" />
+
+    <ImageView
+        android:id="@+id/btmdesign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btmdesignupperguide" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/btmdesignupperguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.68">
+
+    </androidx.constraintlayout.widget.Guideline>
+
+    <TextView
+        android:id="@+id/txtstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lets Start"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btmdesign"
+        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintStart_toStartOf="@+id/btmdesign"
+        app:layout_constraintTop_toBottomOf="@+id/playbutton"
+        app:layout_constraintVertical_bias="0.829" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
